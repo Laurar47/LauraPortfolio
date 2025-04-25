@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+/*--------------------------------------COLORS------------------------------------------*/
+/* RGB:
+        Caramel Brown rgb(105, 60, 22)
+        Whitesmoke rgb(245,245,245)
+
+
+/*--------------------------------------NAV BAR------------------------------------------*/
+.main_nav{
+    display: flex;
+    align-items: center;
+    list-style: none; /*removes bullets from list*/
+    background-color: rgb(105, 60, 22);
+    padding: .3em;
+    margin: 0;
+}
+
+ /* want to call up somethig specific by classing/numbering*/
+ .main_nav a {
+    color: whitesmoke;
+    padding: 70px 40px;
+    text-decoration: none;
+ }
+
+ /*Style the hover for our nav links*/
+ .main_nav a:hover {
+    background-color: whitesmoke;
+    color: rgb(192, 47, 148);
+ }
+
+ li.logo{ /*logo is on the far left side*/
+    margin-right: auto;
+ }
+
+ /*logo- appear on RIGHT side of screen- logo should not be last list item*/
+ li.logo{ /*logo is on the far right side*/
+    margin-left: auto;
+ }
+
+ /*--------------------------------------HERO------------------------------------------*/
+ .hero_image{
+    background-image: linear-gradient(rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)),url(Images/other_coffee.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+ }
+
+ .hero_header{
+    text-align: text;
+    position: absolute;
+    color: whitesmoke;
+    top: 40%;
+    text-shadow: .05em .05em .1em black;
+    font-size: 3em;
+    margin:20px;
+ }
+
+ .hero_text{
+    text-align: text;
+    position: absolute;
+    color: whitesmoke;
+    top: 50%;
+    text-shadow: .05em .05em .1em black;
+    font-size: large;
+ }
+
+ /*--------------------------------------MAIN------------------------------------------*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    text-align: center;
+    color: rgb(105, 60, 22);
+    background-color: #D1D1D1;
+    margin: 0  auto; /* add this to override your default margin*/;
+    max-width: 1200px;
+}
+h1{
+    font: bold 2em Times,serif;
+    color: rgb(105, 60, 22);
+    text-shadow: .02em .05em .1em gray;
+}
+
+h2{
+    font: bold 1em;
+    text-transform: uppercase;
+    color: rgb(105, 60, 22);
+}
+p, dl {
+    font-family: sans-serif;
+    color: rgb(105, 60, 22);
+}
+
+dt{
+    font-weight: bold;
+    color: rgb(105, 60, 22);
+}
+
+button{
+    background-color: rgb(105, 60, 22);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 3px;
+    padding: 20px 40px;
+    cursor:pointer;
+}
+footer{
+background-color: rgb(105, 60, 22);
+color: white;
+text-align: center;
+font-weight: bold;
+padding: 10px;
+margin: 0 auto;
+}
+
+/*--------------------------------------GRID-INDEX------------------------------------------*/
+#index_grid{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: auto auto auto auto auto auto;   
+grid-template-areas: 
+'welcome    welcome    welcome'
+'shop       shop        shop'
+'fact1      fact2       fact3'
+'about      about       about'
+'product1   product2    product3'
+'review     review      review'; 
+background-color: white;
+}
+
+/*-- grid items for index grid, call up select and name from html, setting grid-area name - which is unique, but must make grid-template area for our wole container */
+
+#welcome{
+    grid-area: welcome;
+    object-fit: cover;
+    text-align: center;
+}
+
+#shop{
+    grid-area: shop;
+    object-fit: cover;
+    text-align: center;
+}
+
+#fact1{
+    grid-area: fact1;
+    object-fit: cover;
+    text-align: center;
+}
+#fact2{
+    grid-area: fact2;
+    object-fit: cover;
+    text-align: center;
+}
+
+#fact3{
+    grid-area: fact3;
+    object-fit: cover;
+    text-align: center;
+}
+
+#product1{
+    grid-area: product1;
+    object-fit: cover;
+    text-align: center;
+}
+
+#product2{
+    grid-area: product2;
+    object-fit: cover;
+    text-align: center;
+}
+
+#product3{
+    grid-area: product3;
+    object-fit: cover;
+    text-align: center;
+}
+#product4{
+    grid-area: product4;
+    object-fit: cover;
+    text-align: center;
+}
+
+#review{
+
+}
+
+/*--container style and spacing--*/
+#welcome{
+    margin: 60px 300px
+}
+
+#review{
+    margin: 40px;
+}
+
+#fact1, fact2, fact3{
+    margin: 50px 20px
+}
